@@ -24,7 +24,7 @@
 
         @Scripts.Render("~/bundles/jquery")
         <script src='https://aiemobileservice.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js'></script>
-        <script src="~/Scripts/dashboard.js"></script>
+        @Scripts.Render("~/bundles/dashboard")
         <script>
             $(document).on("mobileinit", function () {
                 $.mobile.ajaxEnabled = false;
