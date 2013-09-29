@@ -3,14 +3,18 @@
 Dashboard.Index = (function ($) {
     var azureClient = new WindowsAzure.MobileServiceClient('https://aiemobileservice.azure-mobile.net/', 'NYuUVUztAwEXJQZxOFbppximTExpoh26');
     var databaseTable = azureClient.getTable('smart_truck_incident');
-        
-    return {
-        initialize: function () {
+    var enableLogging = false;
+    
+    return {        
+        initialize: function (logSwitch) {
+            enableLogging = logSwitch;
+            Dashboard.Index.log("entering initialize");
             Dashboard.Index.refreshTodoItems();
+            Dashboard.Index.log("end initialize");
         },
 
         refreshTodoItems: function () {
-
+            Dashboard.Index.log("entering refreshTodoItems");
             var query = databaseTable.take(10);
 
             query.read().then(function (todoItems) {
@@ -26,13 +30,19 @@ Dashboard.Index = (function ($) {
                 });
 
                 $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
-                $('#summary').html('<strong>' + todoItems.length + '</strong> item(s)');
-            }, Dashboard.Index.handleError);
+            }, Dashboard.Index.handleError);            
+            Dashboard.Index.log("end refreshTodoItems");
         },
 
         handleError: function () {
             var text = error + (error.request ? ' - ' + error.request.status : '');
             $('#errorlog').append($('<li>').text(text));
+        },
+
+        log: function (message) {
+            if (enableLogging) {
+                $('#errorlog').append($('<li>').text(message));
+            }            
         }
     }
 

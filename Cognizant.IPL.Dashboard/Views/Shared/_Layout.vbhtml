@@ -30,7 +30,7 @@
                 $.mobile.ajaxEnabled = false;
             });
             $(document).on("ready", function () {
-                Dashboard.Index.initialize();
+                Dashboard.Index.initialize(true);
             });
       </script>
 
