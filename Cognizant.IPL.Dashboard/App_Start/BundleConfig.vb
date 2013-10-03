@@ -22,6 +22,9 @@ Public Class BundleConfig
         bundles.Add(New ScriptBundle("~/bundles/dashboard").Include(
                     "~/Scripts/dashboard*"))
 
+        bundles.Add(New ScriptBundle("~/bundles/MobileServices").Include(
+                    "~/Scripts/MobileServices.Web*"))
+
         bundles.Add(New StyleBundle("~/Content/css").Include("~/Content/site.css"))
 
         bundles.Add(New StyleBundle("~/Content/mobilecss").Include("~/Content/jquery.mobile*"))

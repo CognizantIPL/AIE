@@ -3,25 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Cognizant.IPL.Dashboard", "Cognizant.IPL.Dashboard\Cognizant.IPL.Dashboard.vbproj", "{16C8BCB9-671E-42A3-B45C-4B072ACBF552}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "aiemobileservice", "..\repository\aiemobileservice\", "{18CCACBB-78AD-4031-800F-8E9D2F255563}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/aiemobileservice"
-		Debug.AspNetCompiler.PhysicalPath = "..\repository\aiemobileservice\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\aiemobileservice\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/aiemobileservice"
-		Release.AspNetCompiler.PhysicalPath = "..\repository\aiemobileservice\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\aiemobileservice\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "43893"
-	EndProjectSection
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Cognizant.IPL.Dashboard.UnitTests", "Cognizant.IPL.Dashboard.UnitTests\Cognizant.IPL.Dashboard.UnitTests.vbproj", "{F80D17F0-2271-4F47-AE71-8E3DABE5605B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Cognizant.IPL.Dashboard.Api", "Cognizant.IPL.Dashboard.Api\Cognizant.IPL.Dashboard.Api.vbproj", "{9EC2562E-953B-4E2F-8AE8-D33830043984}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +17,14 @@ Global
 		{16C8BCB9-671E-42A3-B45C-4B072ACBF552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16C8BCB9-671E-42A3-B45C-4B072ACBF552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16C8BCB9-671E-42A3-B45C-4B072ACBF552}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18CCACBB-78AD-4031-800F-8E9D2F255563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18CCACBB-78AD-4031-800F-8E9D2F255563}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18CCACBB-78AD-4031-800F-8E9D2F255563}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{18CCACBB-78AD-4031-800F-8E9D2F255563}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F80D17F0-2271-4F47-AE71-8E3DABE5605B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80D17F0-2271-4F47-AE71-8E3DABE5605B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80D17F0-2271-4F47-AE71-8E3DABE5605B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80D17F0-2271-4F47-AE71-8E3DABE5605B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC2562E-953B-4E2F-8AE8-D33830043984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC2562E-953B-4E2F-8AE8-D33830043984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC2562E-953B-4E2F-8AE8-D33830043984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC2562E-953B-4E2F-8AE8-D33830043984}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
