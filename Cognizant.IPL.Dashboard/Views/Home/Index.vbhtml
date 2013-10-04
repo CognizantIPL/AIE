@@ -26,8 +26,18 @@ End Code
         </div>
 
         <div>
-            <h3>Data from Foresight (TODO)</h3>
-            <p></p>
+            <h3>Data from Equipment</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td>EquipmentId</td>
+                        <td>Temperature</td>
+                        <td>Timestamp</td>
+                        <td>Active Indicator</td>
+                    </tr>
+                </thead>
+                <tbody id='equipment-data'></tbody>
+            </table>
         </div>
 
     </article>

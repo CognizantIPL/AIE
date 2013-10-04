@@ -31,6 +31,8 @@
             });
             $(document).on("ready", function () {
                 Dashboard.Index.initialize(true);
+
+                Dashboard.Equipment.initialize(true);
             });
       </script>
 
