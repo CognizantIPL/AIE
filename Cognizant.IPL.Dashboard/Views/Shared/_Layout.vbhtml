@@ -5,7 +5,7 @@
         <title>@ViewData("Title")</title>
         <meta name="viewport" content="width=device-width" />
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        @Styles.Render("~/Content/mobileCss", "~/Content/css")
+        @Styles.Render("~/Content/mobileCss", "~/Content/css", "~/Content/themes/base/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
@@ -23,16 +23,16 @@
         </div>
 
         @Scripts.Render("~/bundles/jquery")
-        <script src='https://aiemobileservice.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js'></script>
+        @Scripts.Render("~/bundles/jqueryui")
         @Scripts.Render("~/bundles/dashboard")
+        @Scripts.Render("~/bundles/mobileservices")
+        <script src='https://aiemobile.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js'></script>
         <script>
             $(document).on("mobileinit", function () {
                 $.mobile.ajaxEnabled = false;
             });
             $(document).on("ready", function () {
                 Dashboard.Index.initialize(true);
-
-                Dashboard.Equipment.initialize(true);
             });
       </script>
 
