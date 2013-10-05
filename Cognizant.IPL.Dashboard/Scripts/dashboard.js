@@ -7,6 +7,7 @@ Dashboard.Index = (function ($) {
             Dashboard.Common.setLoggingSwitch(logSwitch);
             Dashboard.Common.log("entering initialize");
             Dashboard.Index.refreshData(logSwitch);
+            $('#updateEquipment').on('click', Dashboard.Equipment.updateEquipment);
             Dashboard.Common.log("end initialize");
         },
 
@@ -88,6 +89,17 @@ Dashboard.Equipment = (function ($) {
             Dashboard.Common.setLoggingSwitch(logSwitch);
             Dashboard.Equipment.refreshData();
         },
+        
+        updateEquipment: function () {
+            var equipmentTable = Dashboard.Common.getTable('equipment_incident');
+
+            equipmentTable.update({                
+                id: parseInt($('#equipId').val()),
+                activeIndicator: $('#equipActiveStatus').val()
+            });
+            
+            Dashboard.Equipment.refreshData();
+        },
 
         refreshData: function () {
             var query = Dashboard.Common.getTable('equipment_incident').take(10);
@@ -96,6 +108,7 @@ Dashboard.Equipment = (function ($) {
 
                 var listItems = $.map(todoItems, function (item) {
                     return $('<tr>')
+                        .append($('<td>').text(item.id))
                         .append($('<td>').text(item.equipmentId))
                         .append($('<td>').text(item.temperature))
                         .append($('<td>').text(item.timestamp))

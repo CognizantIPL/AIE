@@ -48,6 +48,7 @@ End Code
                 <table border="1">
                     <thead>
                         <tr>
+                            <td>Id</td>
                             <td>EquipmentId</td>
                             <td>Temperature</td>
                             <td>Timestamp</td>
@@ -56,7 +57,19 @@ End Code
                     </thead>
                     <tbody id='equipment-data'></tbody>
                 </table>
+                <div>
+                    <div>
+                        <span>Id:</span>
+                        <input type="text" id="equipId" />
+                    </div>
+                    <div>
+                        <span>ActiveIndicator:</span>
+                        <input type="text" maxlength="1" id="equipActiveStatus" />
+                    </div>
+                    <input type="button" id="updateEquipment" value="Toggle active flag to true" />
+                </div>
             </div>
+
         </div>
 
     </article>
