@@ -68,6 +68,12 @@ End Code
                     </div>
                     <input type="button" id="updateEquipment" value="Toggle active flag to true" />
                 </div>
+                <div>
+                    <textarea id="equipmentJson">{ equipmentId: "3", thresholdLevel: "01", currentTemperature: "50.8", thresholdLimit: "40"}</textarea>
+
+                    <input type="button" id="postEquipmentToEndpoint" value="Post to mobile service endpoint" />
+
+                </div>
             </div>
 
         </div>

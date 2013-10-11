@@ -8,6 +8,7 @@ Dashboard.Index = (function ($) {
             Dashboard.Common.log("entering initialize");
             Dashboard.Index.refreshData(logSwitch);
             $('#updateEquipment').on('click', Dashboard.Equipment.updateEquipment);
+            $('#postEquipmentToEndpoint').on('click', Dashboard.Common.postToMobileEndpoint);
             Dashboard.Common.log("end initialize");
         },
 
@@ -31,7 +32,7 @@ Dashboard.TruckTracker = (function ($) {
         refreshData: function () {
             var query = Dashboard.Common.getTable('smart_truck_tracker').take(10);
 
-            query.read().then(function (todoItems) {
+            query.read().done(function (todoItems) {
 
                 var listItems = $.map(todoItems, function (item) {
                     return $('<tr>')
@@ -133,6 +134,27 @@ Dashboard.Common = (function ($) {
             if (!azureClient)
                 azureClient = new WindowsAzure.MobileServiceClient('https://aiemobileservice.azure-mobile.net/', 'NYuUVUztAwEXJQZxOFbppximTExpoh26');
             return azureClient.getTable(tableName);
+        },
+        
+        postToMobileEndpoint: function () {
+            var headers = {
+                'X-ZUMO-APPLICATION': 'NYuUVUztAwEXJQZxOFbppximTExpoh26'
+            };
+            
+            $.ajax({
+                url: "https://aiemobileservice.azure-mobile.net/tables/equipment_incident",
+                type: "POST",
+                async: false,
+                headers: headers,
+                data: { insuredId: "1", equipmentId: "3", temperature: 51, incidentTimestamp: "2013-10-08T12:11:00.000Z", activeIndicator: false },
+                dataType: "json",
+                success: function (result) {
+                    Dashboard.Common.log("postToMobileEndpoint succesful");
+                },
+                error: function (result) {
+                    Dashboard.Common.log(("Error:" + result));
+                }
+            });
         },
 
         setLoggingSwitch: function (logSwitch) {

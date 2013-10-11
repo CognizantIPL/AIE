@@ -7,6 +7,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Cognizant.IPL.Dashboard.Uni
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Cognizant.IPL.Dashboard.Api", "Cognizant.IPL.Dashboard.Api\Cognizant.IPL.Dashboard.Api.vbproj", "{9EC2562E-953B-4E2F-8AE8-D33830043984}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Dashboard.Service", "Dashboard.Service\Dashboard.Service.vbproj", "{ED606FF4-22EF-48F6-968A-E9025369A513}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{9EC2562E-953B-4E2F-8AE8-D33830043984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC2562E-953B-4E2F-8AE8-D33830043984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EC2562E-953B-4E2F-8AE8-D33830043984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED606FF4-22EF-48F6-968A-E9025369A513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED606FF4-22EF-48F6-968A-E9025369A513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED606FF4-22EF-48F6-968A-E9025369A513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED606FF4-22EF-48F6-968A-E9025369A513}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
